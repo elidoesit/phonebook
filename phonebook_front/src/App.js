@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react'
 import personsService from './service/persons'
-import axios from 'axios'
-
-
 
 const Filter = ({nameFilter,handleFilterChange }) => {
   return (
