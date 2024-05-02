@@ -18,4 +18,4 @@ jobs:
       - name: Install ESLint
         run: npm install eslint
       - name: Check style
-        run: eslint .
+        run: npm run lint
