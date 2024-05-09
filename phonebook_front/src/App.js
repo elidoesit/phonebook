@@ -121,6 +121,8 @@ const App = () => {
       setMessage(
         `${newName} was successfully added`
         )
+      setNewName('')
+      setNewNumber('')
       setTimeout(() => {
       setMessage(null)
       }, 5000)

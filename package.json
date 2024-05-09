@@ -7,7 +7,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "rm -rf build && cd /Users/edahms/full_stack_open/part_2/phonebook && npm run build && cp -R build /Users/edahms/full_stack_open/part_3/phonebook_backend/",
+    "build": "npm build",
     "deploy": "git push heroku main",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
     "logs:prod": "heroku logs --tail",
@@ -31,6 +31,8 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@flydotio/dockerfile": "^0.5.7",
     "eslint": "^8.57.0",
     "eslint-config-react-app": "^7.0.1",
     "nodemon": "^2.0.16"

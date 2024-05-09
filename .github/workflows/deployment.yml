@@ -19,3 +19,11 @@ jobs:
         run: npm install eslint
       - name: Check style
         run: npm run lint
+       - name: deploy
+        if: '${{ github.event_name == ''push'' }}'
+        uses: superfly/flyctl-actions/setup-flyctl@master
+        with:
+          api_token: '${{ secrets.FLY_API_TOKEN }}'
+      - run: flyctl deploy --remote-only
+        env:
+          FLY_API_TOKEN: '${{ secrets.FLY_API_TOKEN }}'
