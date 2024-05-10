@@ -19,7 +19,7 @@ jobs:
         run: npm install eslint
       - name: Check style
         run: npm run lint
-       - name: deploy
+      - name: deploy
         if: '${{ github.event_name == ''push'' }}'
         uses: superfly/flyctl-actions/setup-flyctl@master
         with:
