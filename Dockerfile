@@ -28,7 +28,7 @@ FROM base as build_frontend
 WORKDIR /app/phonebook_front
 
 # Install frontend dependencies and build
-RUN npm ci && npm run build
+RUN npm ci && npm run serve
 
 # Final stage for app image
 FROM base
